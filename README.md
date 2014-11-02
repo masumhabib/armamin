@@ -7,8 +7,7 @@ Usage
 ======
 The configure script finds the armadillo library, compiles the 
 program and links it automatically: 
-```
-#!bash
+```bash
 ./configure # configures project using cmake
 ./configure build # compile and link
 ```
