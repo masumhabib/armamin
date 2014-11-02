@@ -50,6 +50,10 @@ int main(int argc, char** argv) {
     C = solve(A, B);
     cout << "A\\B = " << endl << C << endl;
 
+    // Eigenvalue solver
+    cx_vec E = eig_gen(A);
+    cout << "Eigen values of (A): " << endl << E << endl;
+
     
     return MAIN_SUCCESS;
 }
