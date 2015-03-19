@@ -1,14 +1,15 @@
 ARMAMIN
 ========
 A minimalistic project that demonstrates the usage of
-[http://arma.sourceforge.net](armadillo) and cmake.
+[armadillo](http://arma.sourceforge.net) and cmake.
 
 Usage
 ======
 The configure script finds the armadillo library, compiles the 
 program and links it automatically: 
 ```bash
-./configure # configures project using cmake
-./configure build # compile and link
+./build config # configures project using cmake
+./build # compile and link
+./build install # installs the project
 ```
 The executable file will be in the bin folder.
