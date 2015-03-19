@@ -16,9 +16,6 @@ set(CMAKE_VERBOSE_MAKEFILE      off)
 #set(CMAKE_BUILD_TYPE "Debug")
 
 
-# Add local usr path for locally compiled libraries
-set(CMAKE_PREFIX_PATH $ENV{HOME}/usr)
-
 # Start configuration
 set(ARMAMIN_VERSION ${ARMAMIN_MAJOR}.${ARMAMIN_MINOR}.${ARMAMIN_PATCH})
 message(STATUS "Configuring ARMAMIN ${ARMAMIN_VERSION}")
@@ -26,9 +23,12 @@ message(STATUS "System: ${CMAKE_SYSTEM_NAME} ${CMAKE_SYSTEM_PROCESSOR}")
 
 project(armamin CXX)
 
+# For custom cmake scripts
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+
+
 # Options
 # -----------------------------------------------------------------------------
-
 #Set a default build type if none was specified
 if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
     message(STATUS "Setting build type to 'Release' as none was specified.")
